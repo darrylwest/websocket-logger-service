@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>spell check page</title>
+    <script src="browser-messaging-commons.js"></script>
+    <script src="messaging-config.js"></script>
+    <script src="SpellCheckClient.js"></script>
+    <script>
+        var client;
+
+        var start = function() {
+            var options = readMessagingConfig();
+            console.log( JSON.stringify( options ));
+
+            client = SpellCheckClient.createInstance( options );
+
+            client.start();
+
+            window.client = client;
+        };
+
+    </script>
+</head>
+<body onload="start();">
+
+<p>nothing on the UI--just start the spell service and use the console to client.checkSpelling(word)</p>
+
+</body>
+</html>
