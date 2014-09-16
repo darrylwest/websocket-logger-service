@@ -53,7 +53,7 @@ LoggerClient.createInstance = function(opts) {
     opts.version = '2014.09.01';
     opts.log = RemoteLogger.createLogger('LoggerClient');
 
-    return new SpellCheckClient( opts );
+    return new LoggerClient( opts );
 };
 
 if (typeof module === 'object') {
