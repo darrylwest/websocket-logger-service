@@ -21,13 +21,13 @@
     "producer/consumer"
   ],
   "dependencies": {
-    "background-service-runner": "^0.90.20",
-    "faye": "^1.0.3",
-    "lodash": "~2.4.1",
+    "background-service-runner": "^0.90.22",
+    "faye": "^1.1.0",
+    "lodash": "^3.0.0",
     "moment": "^2.8.1",
     "node-messaging-commons": "^0.90.33",
     "node-uuid": "~1.4.1",
-    "simple-node-logger": "^0.91.98"
+    "simple-node-logger": "^0.92.15"
   },
   "devDependencies": {
     "grunt": "~0.4.2",

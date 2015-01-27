@@ -26,7 +26,8 @@ describe('LoggerService', function() {
             methods = [
                 'start',
                 'createMessageProducer',
-                'messageHandler'
+                'messageHandler',
+                'openSession'
             ];
 
         it('should create an instance of LoggerService', function() {
