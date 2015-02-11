@@ -1,29 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>spell check page</title>
+    <title>websocket logger test page</title>
     <script src="browser-messaging-commons.js"></script>
     <script src="messaging-config.js"></script>
-    <script src="SpellCheckClient.js"></script>
+    <script src="LoggerClient.js"></script>
     <script>
         var client;
 
         var start = function() {
-            var options = readMessagingConfig();
+            var options = readMessagingConfig(),
+                log = RemoteLogger.createLogger('ClientApp');
+
             console.log( JSON.stringify( options ));
 
-            client = SpellCheckClient.createInstance( options );
+            client = LoggerClient.createInstance( options );
 
             client.start();
 
+            RemoteLogger.prototype.send = client.loggerMessageHandler;
+
             window.client = client;
+            window.log = log;
         };
 
     </script>
 </head>
 <body onload="start();">
 
-<p>nothing on the UI--just start the spell service and use the console to client.checkSpelling(word)</p>
+<p>nothing on the UI--just start the logger service and use the console to log statements and observe on the back end service...</p>
 
 </body>
 </html>

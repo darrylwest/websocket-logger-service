@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/darrylwest/websocket-spellcheck-service.git"
+    "url": "https://github.com/darrylwest/websocket-logger-service.git"
   },
   "scripts": {
     "test": "grunt testAll"
@@ -23,11 +23,11 @@
   "dependencies": {
     "background-service-runner": "^0.90.22",
     "faye": "^1.1.0",
-    "lodash": "^3.0.0",
+    "lodash": "^3.1.0",
     "moment": "^2.8.1",
-    "node-messaging-commons": "^0.90.33",
-    "node-uuid": "~1.4.1",
-    "simple-node-logger": "^0.92.15"
+    "node-messaging-commons": "^0.90.37",
+    "node-uuid": "^1.4.1",
+    "simple-node-logger": "^0.92.16"
   },
   "devDependencies": {
     "grunt": "~0.4.2",

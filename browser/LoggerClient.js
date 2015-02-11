@@ -23,7 +23,7 @@ var LoggerClient = function(options) {
      * open the public/private channels to begin exchanges
      */
     this.start = function() {
-        log.info('open the spell-check channel: ', channelName);
+        log.info('open the logger channel: ', channelName);
         client.subscribe( channelName, client.loggerMessageHandler );
     };
 
@@ -42,7 +42,7 @@ var LoggerClient = function(options) {
         // client UI would push up to log table
     };
 
-    if (!log) throw new Error('access client must be constructed with a log');
+    if (!log) throw new Error('logger client must be constructed with a log');
 };
 
 LoggerClient.createInstance = function(opts) {
